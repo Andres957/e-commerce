@@ -1,3 +1,4 @@
+
 const btnRegister = document.getElementById("btn__register");
 const formRegister = document.getElementById("user__register");
 const formLogin = document.getElementById("user__login");

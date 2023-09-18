@@ -1,4 +1,6 @@
+
 import { eliminarProducto } from "./administrador.js";
+
 import { comprarProducto } from "./carrito.js";
 
 const userLogin = document.getElementById("userLogin");
@@ -68,7 +70,7 @@ export const generarCardsProductos = (productos) => {
 
     const btnComprar = document.getElementById(`btn${id}`);
     btnComprar.addEventListener("click", () => comprarProducto(id));
-
+   
     if (usuarioLogeado?.admin === true) {
       const btnEliminar = document.getElementById(`eliminar${id}`);
       btnEliminar.addEventListener("click", () => eliminarProducto(id));
