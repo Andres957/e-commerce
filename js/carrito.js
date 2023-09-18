@@ -28,6 +28,12 @@ btnCarrito.addEventListener("click", () => {
 
 export const comprarProducto = (idProducto) => {
 
+    Toastify({
+        text: 'Producto agregado al carrito',
+        duration: 3000, // Duración en milisegundos
+        gravity: 'top', // Posición de la notificación
+        backgroundColor: 'green', // Color de fondo
+      }).showToast();
     const producto = productosDisponibles.find((producto) => producto.id === idProducto)
 
     const { nombre, precio, imagen, id } = producto
@@ -131,6 +137,7 @@ const generarTotales = () => {
     }
 }
 
+
 const aumentarCantidad = (id) => {
     const indexProductoCarrito = carrito.findIndex((producto) => producto.id === id)
     const precio = carrito[indexProductoCarrito].precio / carrito[indexProductoCarrito].cantidad
@@ -142,7 +149,17 @@ const aumentarCantidad = (id) => {
     dibujarCarrito()
 
 }
+const btnCerrarCarrito = document.getElementById("btnCerrarCarrito");
 
+btnCerrarCarrito.addEventListener("click", () => {
+  cerrarCarrito();
+});
+
+// Función para cerrar el carrito
+function cerrarCarrito() {
+  const carritoTable = document.getElementById("carrito");
+  carritoTable.style.display = "none";
+}
 const restarCantidad = (id) => {
     const indexProductoCarrito = carrito.findIndex((producto) => producto.id === id)
     const precio = carrito[indexProductoCarrito].precio / carrito[indexProductoCarrito].cantidad
