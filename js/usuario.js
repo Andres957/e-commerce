@@ -32,9 +32,9 @@ const validarYlogear = (user, pass) => {
     const valores = document.createElement("p");
     valores.textContent = "alguno de los campos cargados es incorrecto";
     contenedor.appendChild(valores);
-    /* alert("error en usuario o contraseña")*/
+    
   } else {
-    /* alert(`Bienvenido ${user}`)*/
+    
 
     const nuevoParrafo = document.createElement("p");
     nuevoParrafo.textContent = `Bienvenid@ ${user}`;
@@ -75,9 +75,7 @@ const validarYRegistrar = (nuevoUsuario) => {
     const registro = document.createElement("p");
     registro.textContent = `Gracias ${nuevoUsuario.user} por registrarte.. usted sera redirigido a la pagina principal`;
     contenedor3.appendChild(registro);
-    /*alert(
-      `Gracias ${nuevoUsuario.user} por registrarte.. usted sera redirigido a la pagina principal`
-    );*/
+    
     console.log(usuarios);
     location.href = "../index.html";
   } else {
@@ -85,7 +83,7 @@ const validarYRegistrar = (nuevoUsuario) => {
     const registroExistente = document.createElement("p");
     registroExistente.textContent = `El usuario ya existe`;
     contenedor4.appendChild(registroExistente);
-    /*alert(`El usuario ya existe`);*/
+    
 
     sessionStorage.setItem("usuario", JSON.stringify(usuario));
     location.href = "../inicio.html";

@@ -78,7 +78,7 @@ export const generarCardsProductos = (productos) => {
   });
 };
 
-// Filtrar por input
+
 filterInput.addEventListener("keyup", (e) => {
   const productosFilter = productosDisponibles.filter((producto) =>
     producto.nombre.toLowerCase().includes(e.target.value)
@@ -94,7 +94,7 @@ filterInput.addEventListener("keyup", (e) => {
   }
 });
 
-// Filtro por categoria segun pick en lista
+
 
 filterLista.addEventListener("click", (e) => {
   const productosFilter = productosDisponibles.filter((producto) =>
@@ -111,12 +111,12 @@ filterLista.addEventListener("click", (e) => {
   }
 });
 
-// Filtro selector por nombre
+
 filterNombre.addEventListener("click", (e) => {
   filtrarPorNombre(e.target.innerHTML);
 });
 
-//Filtro por nombre
+
 
 const filtrarPorNombre = (orden) => {
   let productos;
@@ -145,7 +145,7 @@ const filtrarPorNombre = (orden) => {
   generarCardsProductos(productos);
 };
 
-// Filtro por precio
+
 
 filterPrecio.addEventListener("click", (e) => {
   const orden = e.target.innerHTML;

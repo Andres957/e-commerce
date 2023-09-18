@@ -100,12 +100,6 @@ const guadarProducto = () => {
         generarCardsProductos(productosDisponibles)
 
 
-    }else{
-        /*var contenedor = document.getElementById("contenedor");
-        let valores = document.createElement("p");
-        valores.textContent= "algunos valores no estan completos";
-        contenedor.appendChild(valores);*/
-        /*alert("algun/os valores no estan completos")*/
     }
 }
 
